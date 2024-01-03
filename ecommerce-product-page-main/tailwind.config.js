@@ -6,10 +6,26 @@ export default {
       sm: '375px',
       md: '768px',
       lg: '976px',
-      xl: '1440px',
+      xl: '1440px'
     },
-    extend: {},
+    extend: {
+      colors: {
+        tannedOrange: 'hsl(26, 100%, 55%)',
+        paleOrange: 'hsl(25, 100%, 94%)',
+        veryDarkBlue: 'hsl(220, 13%, 13%)',
+        darkGrayishBlue: 'hsl(219, 9%, 45%)',
+        grayishBlue: 'hsl(220, 14%, 75%)',
+        lightGrayishBlue: 'hsl(223, 64%, 98%)',
+        lightboxBackground: 'hsl(0, 0%, 0%)'
+      },
+      fontFamily:{
+        kumbhSans: ['Kumbh Sans', 'sans-serif'],
+      },
+      fontWeight:{
+        normal: 400,
+        bold: 700,
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 }
-

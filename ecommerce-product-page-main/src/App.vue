@@ -1,12 +1,13 @@
 <script setup>
+import NavBar from '@/components/NavBar.vue';
 
 </script>
 
-<template>
-  <div class="container mx-auto full bg-pink-400">
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  </div>
-</template>
+<template >
+  <div>
 
+  </div>
+  <header>
+    <NavBar/>
+</header>
+</template>
