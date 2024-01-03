@@ -1,6 +1,7 @@
 <script setup>
 import DeskNavLinks from '@/components/DeskNavLinks.vue'
 import PhoneNavLinks from '@/components/PhoneNavLinks.vue';
+import CartComponent from '@/components/CartComponent.vue';
 import { useSwitchStore } from '@/stores/switch'
 
 const switchStore = useSwitchStore();
@@ -23,7 +24,7 @@ const switchStore = useSwitchStore();
       </div>
       <PhoneNavLinks v-show="switchStore.menuOn" class="absolute md:hidden"/>
       <div class="flex space-x-8 justify-end items-center">
-        <div class="relative pb-0 md:pb-8">
+        <div @click="switchStore.switchCart" class="relative pb-0 md:pb-8">
           <img
             src="@/images/icon-cart.svg"
             class="object-none cursor-pointer "
@@ -42,4 +43,5 @@ const switchStore = useSwitchStore();
     </div>
     <hr class="hidden md:block" />
   </div>
+  <CartComponent v-if="switchStore.cartOn"/>
 </template>
