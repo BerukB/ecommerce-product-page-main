@@ -1,5 +1,6 @@
 <script setup>
 import NavBar from '@/components/NavBar.vue';
+import CartComponent from '@/components/CartComponent.vue';
 </script>
 
 <template >
@@ -8,5 +9,6 @@ import NavBar from '@/components/NavBar.vue';
   </div>
   <header>
     <NavBar/>
+    <CartComponent/>
   </header>
 </template>
