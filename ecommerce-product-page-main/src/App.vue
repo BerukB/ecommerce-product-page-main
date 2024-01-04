@@ -1,6 +1,6 @@
 <script setup>
 import NavBar from '@/components/NavBar.vue';
-
+import MainPageView from '@/views/MainPageView.vue'
 </script>
 
 <template >
@@ -9,5 +9,7 @@ import NavBar from '@/components/NavBar.vue';
   </div>
   <header>
     <NavBar/>
+    <MainPageView/>
+
 </header>
 </template>

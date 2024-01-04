@@ -6,7 +6,7 @@ const isEmpty = true;
 <template>
     <div class="container mx-auto relative">
         <div class=" flex justify-center md:absolute md:right-0 md:-top-10">
-            <div class="w-72 h-48 drop-shadow-xl rounded-lg bg-white ">
+            <div class="w-72 h-48 z-20 drop-shadow-xl rounded-lg bg-white ">
                 <p class="p-4 font-bold text-sm">Cart</p>
                 <hr>
                 <div v-if="!isEmpty" class="p-4 ">
