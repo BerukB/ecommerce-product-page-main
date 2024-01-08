@@ -9,7 +9,8 @@ import MainPageView from '@/views/MainPageView.vue'
   </div>
   <header>
     <NavBar/>
-    <MainPageView/>
-
 </header>
+<main>
+  <MainPageView/>
+</main>
 </template>

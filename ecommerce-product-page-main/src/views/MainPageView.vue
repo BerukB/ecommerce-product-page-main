@@ -12,7 +12,7 @@ const images = [imageProduct1,imageProduct2,imageProduct3,imageProduct4];
 
 </script>
 <template>
-<div>
+<div id="imageSlider">
 <ImageSlider :imageUrls="images" />
 </div>
 </template>

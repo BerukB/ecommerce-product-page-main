@@ -9,7 +9,7 @@ const switchStore = useSwitchStore();
 </script>
 
 <template>
-  <div class="container mx-auto px-5 py-3 relative">
+  <div class="px-5 py-3 relative">
     <div class="flex justify-between ">
       <div class="flex items-center justify-center">
         <img

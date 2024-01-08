@@ -1,17 +1,17 @@
 <script setup>
-const itemAmount = 0;
-const sum = 0;
-const isEmpty = true;
+const itemAmount = 3;
+const sum = 375;
+const isEmpty = false;
 </script>
 <template>
-    <div class="container mx-auto relative">
-        <div class=" flex justify-center md:absolute md:right-0 md:-top-10">
-            <div class="w-72 h-48 z-20 drop-shadow-xl rounded-lg bg-white ">
-                <p class="p-4 font-bold text-sm">Cart</p>
+    <div id="cart" class="">
+        <div class="absolute flex pl-3 pt-2 ">
+            <div class="w-[22rem] h-64 z-20 drop-shadow-xl rounded-lg bg-white ">
+                <p class="p-5 font-bold text-md">Cart</p>
                 <hr>
-                <div v-if="!isEmpty" class="p-4 ">
-                    <div class="flex justify-between text-sm">
-                        <img src="../images/image-product-1-thumbnail.jpg" class="w-10 rounded-lg" alt="Sneaker">
+                <div v-if="!isEmpty" class="p-5 ">
+                    <div class="flex justify-between text-md">
+                        <img src="../images/image-product-1-thumbnail.jpg" class="w-14 rounded-md" alt="Sneaker">
                         <div class="">
                             <p class="text-darkGrayishBlue">Fall Limited Edition Sneaker</p>
                             <p class="inline">$125.00 x {{itemAmount}} </p>
@@ -20,10 +20,10 @@ const isEmpty = true;
                         <img src="../images/icon-delete.svg" class="object-contain" alt="delete icon">
                     </div>
                     <div class="mt-6">
-                        <button class="bg-tannedOrange rounded-lg w-full p-3 text-sm font-bold text-white">Checkout</button>
+                        <button class="bg-tannedOrange rounded-lg w-full p-4 text-md font-bold text-white">Checkout</button>
                     </div>
                 </div>
-                <div v-if="isEmpty" class="flex justify-center items-center h-32">
+                <div v-if="isEmpty" class="flex justify-center items-center h-40">
                              <p class="font-bold text-darkGrayishBlue">Your cart is empty.</p>
                 </div>
             </div>
