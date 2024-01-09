@@ -7,7 +7,7 @@ const switchStore = useSwitchStore();
 
 <template >
 
-  <div class="bg-white w-60 h-screen pl-4 pt-3">
+  <div class="bg-white w-60 h-screen pl-4 pt-3 z-10">
     <div class="mb-8 text-darkGrayishBlue hover:text-black cursor-pointer">
       <font-awesome-icon @click="switchStore.switchMenu" icon="fa-solid fa-xmark" />
     </div>

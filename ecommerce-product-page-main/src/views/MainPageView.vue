@@ -6,6 +6,7 @@ import imageProduct3 from "@/images/image-product-3.jpg";
 import imageProduct4 from "@/images/image-product-4.jpg";
 
 import ImageSlider from "@/components/ImageSlider.vue"
+import SneakerDetails from "@/components/SneakerDetails.vue";
 
 
 const images = [imageProduct1,imageProduct2,imageProduct3,imageProduct4];
@@ -14,5 +15,6 @@ const images = [imageProduct1,imageProduct2,imageProduct3,imageProduct4];
 <template>
 <div id="imageSlider">
 <ImageSlider :imageUrls="images" />
+<SneakerDetails/>
 </div>
 </template>
