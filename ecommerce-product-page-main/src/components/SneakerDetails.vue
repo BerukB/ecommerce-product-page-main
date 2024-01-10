@@ -1,6 +1,7 @@
 <script setup>
+import { useItemCounter } from '@/stores/itemCounter'
+const itemCount = useItemCounter();
 
-const amount = 0;
 </script>
 
 <template>
@@ -22,12 +23,12 @@ const amount = 0;
             </div>
         </div>
         <div class="flex justify-between items-center bg-lightGrayishBlue p-4 rounded-md">
-            <img src="../images/icon-minus.svg" class="w-3" alt="decrease icon">
-            <p class="font-bold text-sm">{{ amount }}</p>
-            <img src="../images/icon-plus.svg" class="w-3" alt="increase icon">
+            <div @click="itemCount.decreaseAmount" class="p-1"><img  src="../images/icon-minus.svg" class="w-3" alt="decrease icon"></div>
+            <p class="font-bold text-sm">{{ itemCount.itemAmount }}</p>
+            <img @click="itemCount.increaseAmount" src="../images/icon-plus.svg" class="w-3" alt="increase icon">
 
         </div>
-        <div class="bg-tannedOrange shadow-lg shadow-inherit flex items-center justify-center space-x-4 p-4 rounded-md">
+        <div @click="itemCount.addToCart" class="bg-tannedOrange hover:bg-mediumOrange shadow-lg shadow-inherit flex cursor-pointer items-center justify-center space-x-4 p-4 rounded-md">
             <img src="../images/icon-cart.svg" class="w-4" alt="cart icon">
             <p class="font-bold text-white text-sm">Add to cart</p>
         </div>
