@@ -3,8 +3,9 @@ import DeskNavLinks from '@/components/DeskNavLinks.vue'
 import PhoneNavLinks from '@/components/PhoneNavLinks.vue';
 import CartComponent from '@/components/CartComponent.vue';
 import { useSwitchStore } from '@/stores/switch'
-
+import { useItemCounter } from '@/stores/itemCounter'
 const switchStore = useSwitchStore();
+const itemCount = useItemCounter();
 
 </script>
 
@@ -30,8 +31,8 @@ const switchStore = useSwitchStore();
             class="object-none cursor-pointer "
             alt="cart icon"
           />
-          <p class="bg-tannedOrange px-2 text-white rounded-lg text-[8px] absolute bottom-3  md:bottom-11 left-2">
-            0
+          <p v-show="!itemCount.isCartEmpty" class="bg-tannedOrange px-2 text-white rounded-lg text-[8px] absolute bottom-3  md:bottom-11 left-2">
+            {{ itemCount.itemAmount }}
           </p>
         </div>
         <img
