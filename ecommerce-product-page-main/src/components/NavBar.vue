@@ -23,7 +23,7 @@ const itemCount = useItemCounter();
         <DeskNavLinks class="ml-14 md:ml-10" />
         
       </div>
-      <PhoneNavLinks v-show="switchStore.menuOn" class="absolute md:hidden"/>
+      <PhoneNavLinks v-show="switchStore.menuOn" class="absolute left-0 md:hidden"/>
       <div class="flex space-x-8 justify-end items-center">
         <div @click="switchStore.switchCart" class="relative pb-0 md:pb-8">
           <img
