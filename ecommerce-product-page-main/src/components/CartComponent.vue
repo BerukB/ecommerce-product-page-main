@@ -14,10 +14,10 @@ const itemCount = useItemCounter();
                         <img src="../images/image-product-1-thumbnail.jpg" class="w-14 rounded-md" alt="Sneaker">
                         <div class="">
                             <p class="text-darkGrayishBlue">Fall Limited Edition Sneaker</p>
-                            <p class="inline">$125.00 x {{itemCount.itemAmount}} </p>
+                            <p class="inline">$125.00 x {{itemCount.cartItemAmount}} </p>
                             <p class="inline font-bold "> ${{itemCount.sum}}</p>
                         </div>
-                        <img src="../images/icon-delete.svg" class="object-contain" alt="delete icon">
+                        <img @click="itemCount.removeFromCart" src="../images/icon-delete.svg" class="object-contain cursor-pointer" alt="delete icon">
                     </div>
                     <div class="mt-6">
                         <button class="bg-tannedOrange rounded-lg w-full p-4 text-md font-bold text-white">Checkout</button>

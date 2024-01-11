@@ -23,9 +23,9 @@ const itemCount = useItemCounter();
             </div>
         </div>
         <div class="flex justify-between items-center bg-lightGrayishBlue p-4 rounded-md">
-            <div @click="itemCount.decreaseAmount" class="p-1"><img  src="../images/icon-minus.svg" class="w-3" alt="decrease icon"></div>
+            <div @click="itemCount.decreaseAmount" class="py-1 cursor-pointer"><img  src="../images/icon-minus.svg" class="w-3" alt="decrease icon"></div>
             <p class="font-bold text-sm">{{ itemCount.itemAmount }}</p>
-            <img @click="itemCount.increaseAmount" src="../images/icon-plus.svg" class="w-3" alt="increase icon">
+            <img @click="itemCount.increaseAmount" src="../images/icon-plus.svg" class="w-3 cursor-pointer" alt="increase icon">
 
         </div>
         <div @click="itemCount.addToCart" class="bg-tannedOrange hover:bg-mediumOrange shadow-lg shadow-inherit flex cursor-pointer items-center justify-center space-x-4 p-4 rounded-md">

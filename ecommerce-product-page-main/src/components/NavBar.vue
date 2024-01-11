@@ -32,7 +32,7 @@ const itemCount = useItemCounter();
             alt="cart icon"
           />
           <p v-show="!itemCount.isCartEmpty" class="bg-tannedOrange px-2 text-white rounded-lg text-[8px] absolute bottom-3  md:bottom-11 left-2">
-            {{ itemCount.itemAmount }}
+            {{ itemCount.cartItemAmount }}
           </p>
         </div>
         <img
