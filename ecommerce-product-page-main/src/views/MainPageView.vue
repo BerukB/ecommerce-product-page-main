@@ -7,14 +7,18 @@ import imageProduct4 from "@/images/image-product-4.jpg";
 
 import ImageSlider from "@/components/ImageSlider.vue"
 import SneakerDetails from "@/components/SneakerDetails.vue";
+import DeskImage from "@/components/ImageComponent/DeskImage.vue"
 
 
 const images = [imageProduct1,imageProduct2,imageProduct3,imageProduct4];
 
 </script>
 <template>
-<div id="imageSlider">
-<ImageSlider :imageUrls="images" />
-<SneakerDetails/>
+<div id="imageSlider" class="md:flex md:flex-row md:justify-center md:space-x-20 md:items-center md:p-16 md:relative">
+<ImageSlider :imageUrls="images" class=""/>
+<DeskImage class=""/>
+<div class="md:flex md:justify-start">
+    <SneakerDetails />
+</div>
 </div>
 </template>

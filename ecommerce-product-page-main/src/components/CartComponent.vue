@@ -4,8 +4,8 @@ const itemCount = useItemCounter();
  
 </script>
 <template>
-    <div id="cart" class="">
-        <div class="absolute flex pl-3 pt-2 ">
+    <div id="cart" class="md:relative md:w-full">
+        <div class="absolute flex pl-3 pt-2 md:right-0 md:-top-10">
             <div class="w-[22rem] h-64 z-20 drop-shadow-xl rounded-lg bg-white ">
                 <p class="p-5 font-bold text-md">Cart</p>
                 <hr>
