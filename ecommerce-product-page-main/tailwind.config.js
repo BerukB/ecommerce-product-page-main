@@ -17,7 +17,8 @@ export default {
         darkGrayishBlue: 'hsl(219, 9%, 45%)',
         grayishBlue: 'hsl(220, 14%, 75%)',
         lightGrayishBlue: 'hsl(223, 64%, 98%)',
-        lightboxBackground: 'hsl(0, 0%, 0%)'
+        lightboxBackground: 'hsl(0, 0%, 0%)',
+        blackHawk: 'rgba(0, 0, 0, 0.7)',
       },
       fontFamily:{
         kumbhSans: ['Kumbh Sans', 'sans-serif'],
