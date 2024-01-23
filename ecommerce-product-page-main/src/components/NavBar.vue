@@ -11,7 +11,7 @@ const itemCount = useItemCounter();
 
 <template>
   <div class="px-5 py-3 relative">
-    <div class="flex justify-between ">
+    <div class="flex justify-between md:items-center">
       <div class="flex items-center justify-center">
         <img
         @click="switchStore.switchMenu"
@@ -20,12 +20,13 @@ const itemCount = useItemCounter();
           alt="menu icon"
         />
         <img src="@/images/logo.svg" class="object-none pb-0 md:pb-8" alt="Logo" />
-        <DeskNavLinks class="ml-14 md:ml-10" />
+        <DeskNavLinks class="ml-14 mt-2 md:ml-10" />
         
       </div>
+      <div v-show="switchStore.menuOn" class="absolute bg-blackHawk w-full h-screen pl-4 pt-3 z-10 md:hidden"></div>
       <PhoneNavLinks v-show="switchStore.menuOn" class="absolute left-0 md:hidden"/>
       <div class="flex space-x-8 justify-end items-center">
-        <div @click="switchStore.switchCart" class="relative pb-0 md:pb-8">
+        <div @click="switchStore.switchCart" class="relative top-2 pb-0 md:pb-8">
           <img
             src="@/images/icon-cart.svg"
             class="object-none cursor-pointer "
@@ -37,7 +38,7 @@ const itemCount = useItemCounter();
         </div>
         <img
           src="@/images/image-avatar.png"
-          class="w-1/5 mb-0 md:mb-8 border-2 border-white rounded-full cursor-pointer md:hover:border-tannedOrange md:w-1/4"
+          class="w-1/5 mb-0 md:mb-5 border-2 border-white rounded-full cursor-pointer md:hover:border-tannedOrange md:w-1/4"
           alt="avatar image"
         />
       </div>

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { ref } from 'vue';
 
 import imageProduct1 from "@/images/image-product-1.jpg";
 import imageProduct2 from "@/images/image-product-2.jpg";
@@ -13,9 +14,12 @@ import imageThumbnail4 from "@/images/image-product-4-thumbnail.jpg";
 
 export const useImageStore = defineStore('imageStore', () => {
 
+  const selectedIndex = ref(0);
+  const popupOpened = ref(false);
+
 const productImages = [imageProduct1,imageProduct2,imageProduct3,imageProduct4];
 const thumbnailImages = [imageThumbnail1, imageThumbnail2, imageThumbnail3, imageThumbnail4];
 
 
-  return {productImages,thumbnailImages}
+  return {productImages,thumbnailImages,selectedIndex,popupOpened}
 })
