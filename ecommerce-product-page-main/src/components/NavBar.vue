@@ -1,12 +1,22 @@
 <script setup>
+import {ref} from 'vue';
 import DeskNavLinks from '@/components/DeskNavLinks.vue'
 import PhoneNavLinks from '@/components/PhoneNavLinks.vue';
 import CartComponent from '@/components/CartComponent.vue';
 import { useSwitchStore } from '@/stores/switch'
 import { useItemCounter } from '@/stores/itemCounter'
+
+import { onClickOutside } from '@vueuse/core'
+const cartRef = ref(null); 
+
+
 const switchStore = useSwitchStore();
 const itemCount = useItemCounter();
 
+onClickOutside(cartRef, () => {
+    switchStore.switchCart();
+    console.log("sdfs", switchStore.cartOn);
+})
 </script>
 
 <template>
@@ -45,5 +55,5 @@ const itemCount = useItemCounter();
     </div>
     <hr class="hidden md:block" />
   </div>
-  <CartComponent v-if="switchStore.cartOn"/>
+  <CartComponent v-if="switchStore.cartOn" ref="cartRef"/>
 </template>
