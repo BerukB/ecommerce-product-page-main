@@ -29,7 +29,7 @@ const prevImage = () => {
 </script>
 
 <template>
-    <div v-show="imageStore.popupOpened" id="popupSlider" class="hidden absolute w-full h-screen md:flex justify-center items-center right-1 bg-blackHawk ">
+    <div v-show="imageStore.popupOpened" id="popupSlider" class="hidden fixed w-full h-screen md:flex justify-center items-center right-1 top-0 bg-blackHawk ">
         <div class="relative">
             <div @click="imageStore.popupOpened = false" class="py-5 pl-2 float-right cursor-pointer"><img src="@/images/icon-close.svg" alt="close Icon"></div>
             <div class="mb-6 ">

@@ -9,14 +9,14 @@ const imageStore = useImageStore();
 
 const setSelectedIndex = (index) => {
     imageStore.selectedIndex = index;
-    imageStore.popupOpened = true
+    
 };
 </script>
 
 <template>
     <div class="hidden md:block">
         <div class="mb-6 ">
-            <img :src="imageStore.productImages[imageStore.selectedIndex]" class="w-96 rounded-xl" alt="">
+            <img :src="imageStore.productImages[imageStore.selectedIndex]" @click="imageStore.popupOpened = true" class="w-96 rounded-xl cursor-pointer" alt="">
         </div>
         <div class="flex w-96 justify-between">
             <button  v-for="(image, index) in imageStore.thumbnailImages" :key="index" class="w-20 h-20 rounded-xl border-2"
