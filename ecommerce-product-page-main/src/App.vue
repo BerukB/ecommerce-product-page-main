@@ -4,10 +4,7 @@ import MainPageView from '@/views/MainPageView.vue'
 </script>
 
 <template >
-  <div>
-
-  </div>
-  <header>
+  <header class="container mx-auto">
     <NavBar/>
 </header>
 <main>
